@@ -6,36 +6,36 @@ public class Menu {
 
     public  Menu() {
         Scanner scanner = new Scanner(System.in);
-        Activity k = new Activity();
-        Activity a = new Appointment();
-        Activity t = new School();
-        Security S = new Security();
-        S.CreatePinCode();
+        Activity activity = new Activity();
+        Activity appointment = new Appointment();
+        Activity school = new School();
+        Security security = new Security();
+        security.CreatePinCode();
         System.out.println("");
         boolean check = false;
         while (!check) {
-            if (S.CheckPinCode()) {
+            if (security.CheckPinCode()) {
                 check = true;
                 SleepRhythm.laatKeuzesZien();
                 SleepRhythm.SlaapRitmeKeuze();
                 System.out.println("");
                 String Check1 = "";
                 while (!Check1.equalsIgnoreCase("n")) {
-                    k.AddActivity();
+                    activity.AddActivity();
                     System.out.println("Voer n in om te stoppen met activiteiten toe te voegen");
                     Check1 = scanner.nextLine();
                 }
                 System.out.println("");
                 String Check2 = "";
                 while (!Check2.equalsIgnoreCase("n")) {
-                    a.AddActivity();
+                    appointment.AddActivity();
                     System.out.println("Voer n in om te stoppen met afspraken toe te voegen");
                     Check2 = scanner.nextLine();
                 }
                 System.out.println("");
                 String Check3 = "";
                 while (!Check3.equalsIgnoreCase("n")) {
-                    t.AddActivity();
+                    school.AddActivity();
                     System.out.println("Voer n in om te stoppen met  toe te voegen");
                     Check3 = scanner.nextLine();
                 }
